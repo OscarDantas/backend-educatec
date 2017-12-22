@@ -28,7 +28,8 @@ class EditalController extends Controller
     public function show(Request $request, $id){
         if($request->isJson()){
             $Edital = Edital::find($id);
- 
+            $Edital->lei;
+
             return response()->json($Edital);
         }
 

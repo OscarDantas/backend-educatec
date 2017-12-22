@@ -14,21 +14,22 @@ class LeiController extends Controller
     }
 
     public function index(Request $request){
-        if($request->isJson()){
+        //if($request->isJson()){
             $Lei = Lei::all();
      
             return response()->json($Lei, 200);
-        }
+        //}
 
-        return response()->json(['error' => 'Não autorizado'], 401, []);
+        //return response()->json(['error' => 'Não autorizado'], 401, []);
  
     }
  
     public function show(Request $request, $id){
         if($request->isJson()){
             $Lei = Lei::find($id);
+            $Lei->Editals;
  
-            return response()->json($Lei, 200);
+            return response()->json($Lei->editals(), 200);
         }
 
         return response()->json(['error' => 'Não autorizado'], 401, []);

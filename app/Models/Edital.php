@@ -12,7 +12,7 @@ class Edital extends Model
 		'id_lei', 'ds_titulo', 'dt_edital', 'st_edital', 'ds_link', 'st_registro_ativo',
 	];
 
-	public function leis(){
+	public function lei(){
     	return $this->belongsTo('App\Models\Lei', 'id_lei');
     }
 }

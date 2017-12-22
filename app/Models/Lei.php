@@ -13,6 +13,6 @@ class Lei extends Model
 	];
 
     public function editals(){
-    	return $this->hasMany('App\Models\Edital');
+    	return $this->hasMany('App\Models\Edital', 'id_lei');
     }
 }
