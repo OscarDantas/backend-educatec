@@ -15,7 +15,7 @@ class CreateLeiTable extends Migration
     {
         Schema::create('lei', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('ds_lei');
+            $table->string('ds_lei', 100);
             $table->date('dt_lei');
             $table->char('st_registro_ativo');
             $table->timestamps();

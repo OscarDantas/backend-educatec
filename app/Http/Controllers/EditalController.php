@@ -16,13 +16,13 @@ class EditalController extends Controller
     }
 
     public function index(Request $request){
-        if($request->isJson()){ 
+        //if($request->isJson()){ 
             $Edital = Edital::all();
      
             return response()->json($Edital);
-        }
+        //}
 
-        return response()->json(['error' => 'Não autorizado'], 401, []); 
+        //return response()->json(['error' => 'Não autorizado'], 401, []); 
     }
  
     public function show(Request $request, $id){
